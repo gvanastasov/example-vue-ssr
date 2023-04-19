@@ -21,7 +21,7 @@ server.get('/', (_req, res) => {
   });
 });
 
-server.use(express.static(path.join(__dirname,'../client')));
+server.use(express.static(path.join(__dirname,'../../dist/public')));
 
 server.listen(port, () => {
   console.log('Server started at http://localhost:' + port);

@@ -9,6 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const server = express();
+const port = process.env.PORT || 8080;
 
 server.get('/', (req, res) => {
     const app = createApp();
@@ -38,6 +39,6 @@ server.get('/', (req, res) => {
 
 server.use(express.static(path.join(__dirname,'../client')));
 
-server.listen(3000, () => {
-  console.log('ready');
+server.listen(port, () => {
+  console.log('Server started at http://localhost:' + port);
 });

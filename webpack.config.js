@@ -20,6 +20,7 @@ const clientConfig = {
     output: {
         path: path.resolve(__dirname, "dist/public"),
         publicPath: "/",
+        filename: 'client.js',
         clean: true
     },
 

@@ -14,12 +14,12 @@ const port = process.env.PORT || 8080;
 server.set('view engine', 'ejs');
 
 server.get('/', (_req, res) => {
-    const app = createApp();
-  
-    renderToString(app).then((html) => {
-      res.render(path.join(__dirname, './index.ejs'), { html })
-    });
+  const app = createApp();
+
+  renderToString(app).then((html) => {
+    res.render(path.join(__dirname, './index.ejs'), { html })
   });
+});
 
 server.use(express.static(path.join(__dirname,'../client')));
 

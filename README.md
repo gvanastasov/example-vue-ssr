@@ -4,7 +4,7 @@ This is a simple Vue SSR application project that demonstrates how to create a b
 
 ## **Project Setup**
 
-1. Clone this repository to your local machine using the command git clone https://github.com/your-username/vue-ssr-app.git
+1. Clone this repository to your local machine using the command git clone https://github.com/gvanastasov/example-vue-ssr.git
 2. Navigate to the project directory using the command cd vue-ssr-app
 3. Install the dependencies using the command npm install
 
@@ -13,23 +13,10 @@ This is a simple Vue SSR application project that demonstrates how to create a b
 To run the application, use the following command:
 
 ```ssh
-npm run dev
+npm run start
 ```
 
 This command will start the development server and you can access the application at http://localhost:8080.
-
-## **Building the Application**
-
-To build the application, use the following command:
-```ssh
-npm run build
-```
-
-This command will generate a production-ready build of the application in the dist directory.
-
-## **Contributing**
-
-If you would like to contribute to this project, please open a pull request or submit an issue.
 
 ## **License**
 

@@ -1,3 +1,7 @@
 import { createApp } from "./app.js";
 
-createApp().mount('#app');
+const { app, router } = createApp({ isServer: false })
+
+router.isReady().then(() => {
+    app.mount('#app');
+})

@@ -9,6 +9,12 @@ module.exports = {
         clean: true
     },
 
+    resolve: {
+        alias: {
+            vue: 'vue/dist/vue.esm-bundler'
+        }
+    },
+
     module: {
         rules: [
             // Configure vue-loader

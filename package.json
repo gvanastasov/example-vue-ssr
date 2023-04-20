@@ -1,7 +1,7 @@
 {
   "name": "example-vue-ssr",
   "version": "1.0.0",
-  "description": "",
+  "description": "A dummy application that renders on the server and rehydrates on the client.",
   "scripts": {
     "build": "webpack --config ./build/webpack.config.js --mode development",
     "start": "node ./dist/server.js"

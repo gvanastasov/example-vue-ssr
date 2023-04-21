@@ -16,18 +16,18 @@ const publicLocation = express.static(path.join(__dirname,'../../dist/public'));
 /**
  * Generates server routes out of client side routing engine.
  * @param {*} route 
- * @param {*} parent 
+ * @param {*} parentRoutePath 
  */
-const generateServerRoutes = function(route, parent) {
+const generateServerRoutes = function(route, parentRoutePath) {
   let routePath = `${route.path}`;
   if (parent) {
-    routePath = path.join(parent.path, routePath)
+    routePath = path.join(parentRoutePath, routePath)
   }
 
   generateServerRoute(routePath);
 
   if (route.children && route.children.length) {
-    route.children.forEach(x => generateServerRoutes(x, route))
+    route.children.forEach(x => generateServerRoutes(x, routePath))
   }
 }
 

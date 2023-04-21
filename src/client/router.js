@@ -1,9 +1,9 @@
 import { createRouter, createMemoryHistory, createWebHistory } from 'vue-router'
 
-import Home from './Home.vue';
-import About from './About.vue';
+import Home from './pages/Home.vue';
+import About from './pages/About.vue';
 
-export const createRouterSSR = function({ isServer }) {
+export const createSSRRouter = function({ isServer }) {
     let history = isServer ? createMemoryHistory() : createWebHistory()
     
     const router = createRouter({

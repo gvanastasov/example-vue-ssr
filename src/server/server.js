@@ -20,7 +20,7 @@ const publicLocation = express.static(path.join(__dirname,'../../dist/public'));
  */
 const generateServerRoutes = function(route, parentRoutePath) {
   let routePath = `${route.path}`;
-  if (parent) {
+  if (parentRoutePath) {
     routePath = path.join(parentRoutePath, routePath)
   }
 
